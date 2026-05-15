@@ -9,6 +9,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
+        /* Custom Footer */
+.footer-custom {
+    background-color: #1a1e23; /* Màu tối sang trọng */
+    color: white;
+}
+.footer-links li {
+    margin-bottom: 12px;
+}
+.footer-links a {
+    color: #adb5bd;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+.footer-links a:hover {
+    color: var(--primary-blue);
+    padding-left: 8px; /* Hiệu ứng lùi nhẹ khi di chuột */
+}
+.social-btn-footer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.social-btn-footer:hover {
+    background-color: var(--primary-blue);
+    color: white;
+    transform: translateY(-3px);
+}
+.footer-input::placeholder {
+    color: #6c757d;
+}
+.footer-input:focus {
+    box-shadow: none;
+    border-color: var(--primary-blue);
+}
         /* Tái sử dụng CSS từ trang chủ */
         :root { --primary-gold: #cda434; --dark-bg: #111111; }
         body { font-family: 'Roboto', sans-serif; background-color: #fcfcfc; color: #333; }
@@ -258,12 +300,66 @@
     </div>
 
     <!-- Footer rút gọn -->
-    <footer class="footer text-center">
-        <div class="container">
-            <p class="mb-1 fw-bold">WATCHES STORE WEBSITE</p>
-            <p class="text-muted small">&copy; 2026. Dự án được phát triển bởi Khải và Quốc Thịnh.</p>
+    <footer class="footer-custom pt-5 pb-3 mt-auto">
+    <div class="container">
+        <div class="row g-4 mb-4">
+            <div class="col-lg-4 col-md-6 pe-lg-5">
+                <h4 class="fw-bold mb-3 text-white">SH FlowX</h4>
+                <p class="text-secondary small mb-4" style="line-height: 1.6;">
+                    Uống là chill – Học là feel – Làm việc là flow. Chúng tôi mang đến không gian lý tưởng nhất để bạn tập trung làm việc và thưởng thức những ly cà phê chất lượng cao.
+                </p>
+                <div class="d-flex gap-2">
+                    <a href="#" class="social-btn-footer"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-btn-footer"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-btn-footer"><i class="bi bi-tiktok"></i></a>
+                    <a href="#" class="social-btn-footer"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h6 class="fw-bold text-uppercase mb-4 mt-2 mt-lg-0">Khám Phá</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Menu Đồ Uống</a></li>
+                    <li><a href="#">Hình ảnh Không gian</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+                <h6 class="fw-bold text-uppercase mb-4 mt-2 mt-lg-0">Hỗ Trợ</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Chính sách thành viên</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Bảo mật thông tin</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <h6 class="fw-bold text-uppercase mb-4 mt-2 mt-lg-0">Nhận Ưu Đãi</h6>
+                <p class="text-secondary small mb-3">Đăng ký email để nhận ngay voucher giảm giá 20% cho lần ghé thăm đầu tiên.</p>
+                <form class="d-flex">
+                    <input type="email" class="form-control footer-input rounded-0 rounded-start bg-transparent text-white border-secondary" placeholder="Nhập email của bạn..." aria-label="Email">
+                    <button class="btn btn-custom-primary rounded-0 rounded-end px-3" type="button">
+                        <i class="bi bi-send-fill"></i>
+                    </button>
+                </form>
+            </div>
         </div>
-    </footer>
+        
+        <hr class="border-secondary mb-3 mt-4">
+        
+        <div class="row align-items-center text-secondary small">
+            <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                &copy; 2026 SH FlowX Coffee & Workspace. All rights reserved.
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                Thiết kế giao diện với <i class="bi bi-heart-fill text-danger mx-1"></i> Bootstrap 5
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
