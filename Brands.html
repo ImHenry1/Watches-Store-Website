@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Watch Brands | Watches Store
+    </title>
+
+    <!-- Bootstrap -->
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+
+    <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+    <style>
+
+        :root{
+            --gold:#cda434;
+            --dark:#111111;
+        }
+
+        body{
+            font-family:'Roboto',sans-serif;
+            background:#f5f5f5;
+            color:#333;
+        }
+
+        h1,h2,h3,h4{
+            font-family:'Playfair Display',serif;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+            background:white;
+            box-shadow:0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .navbar-brand{
+            font-size:1.8rem;
+            font-weight:700;
+        }
+
+        .nav-link{
+            text-transform:uppercase;
+            font-weight:500;
+        }
+
+        .nav-link:hover{
+            color:var(--gold)!important;
+        }
+
+        /* HERO */
+
+        .hero{
+            background:url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1600&auto=format&fit=crop') center/cover;
+            height:400px;
+            position:relative;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            color:white;
+        }
+
+        .hero::before{
+            content:'';
+            position:absolute;
+            inset:0;
+            background:rgba(0,0,0,0.6);
+        }
+
+        .hero-content{
+            position:relative;
+            z-index:2;
+        }
+
+        .hero h1{
+            font-size:4rem;
+            font-weight:bold;
+        }
+
+        .hero p{
+            font-size:1.2rem;
+            letter-spacing:1px;
+        }
+
+        /* BRANDS */
+
+        .brands-section{
+            padding:80px 0;
+        }
+
+        .section-title{
+            text-align:center;
+            margin-bottom:60px;
+        }
+
+        .section-title h2{
+            font-size:3rem;
+            font-weight:bold;
+        }
+
+        .brand-card{
+            background:white;
+            border-radius:15px;
+            overflow:hidden;
+            transition:0.4s;
+            box-shadow:0 5px 20px rgba(0,0,0,0.08);
+            height:100%;
+        }
+
+        .brand-card:hover{
+            transform:translateY(-10px);
+        }
+
+        .brand-card img{
+            width:100%;
+            height:260px;
+            object-fit:cover;
+        }
+
+        .brand-content{
+            padding:25px;
+            text-align:center;
+        }
+
+        .brand-content h4{
+            font-size:1.8rem;
+            margin-bottom:15px;
+        }
+
+        .brand-content p{
+            color:#777;
+            min-height:70px;
+        }
+
+        .btn-gold{
+            background:var(--gold);
+            color:white;
+            border:none;
+            padding:12px 25px;
+            border-radius:5px;
+            text-transform:uppercase;
+            font-weight:500;
+        }
+
+        .btn-gold:hover{
+            background:#a88322;
+            color:white;
+        }
+
+        /* FOOTER */
+
+        .footer{
+            background:var(--dark);
+            color:white;
+            padding:60px 0;
+            text-align:center;
+            margin-top:80px;
+        }
+
+        .social-icons i{
+            font-size:20px;
+            margin:0 10px;
+            transition:0.3s;
+            cursor:pointer;
+        }
+
+        .social-icons i:hover{
+            color:var(--gold);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand"
+            href="index.html">
+
+                <i class="fa-regular fa-clock text-warning me-2"></i>
+
+                WATCHES STORE
+
+            </a>
+
+            <button class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse"
+            id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active text-warning"
+                        href="Brands.html">
+
+                            Thương hiệu
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                        href="nam.html">
+
+                            Sản phẩm
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                        href="index.html">
+
+                            Liên hệ
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Luxury Watch Brands
+            </h1>
+
+            <p>
+                Khám phá những thương hiệu đồng hồ nổi tiếng hàng đầu thế giới
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- BRANDS -->
+
+    <section class="brands-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Thương Hiệu Nổi Bật
+                </h2>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Rolex -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="brand-card">
+
+                        <img
+                        src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop"
+                        alt="Rolex">
+
+                        <div class="brand-content">
+
+                            <h4>Rolex</h4>
+
+                            <p>
+                                Biểu tượng của sự đẳng cấp và sang trọng Thụy Sĩ.
+                            </p>
+
+                            <button class="btn btn-gold">
+                                Xem thêm
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Longines -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="brand-card">
+
+                        <img
+                        src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop"
+                        alt="Longines">
+
+                        <div class="brand-content">
+
+                            <h4>Longines</h4>
+
+                            <p>
+                                Đồng hồ thanh lịch với lịch sử lâu đời từ Thụy Sĩ.
+                            </p>
+
+                            <button class="btn btn-gold">
+                                Xem thêm
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Casio -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="brand-card">
+
+                        <img
+                        src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=1200&auto=format&fit=crop"
+                        alt="Casio">
+
+                        <div class="brand-content">
+
+                            <h4>Casio</h4>
+
+                            <p>
+                                Thương hiệu nổi tiếng với độ bền và phong cách trẻ trung.
+                            </p>
+
+                            <button class="btn btn-gold">
+                                Xem thêm
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Tissot -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="brand-card">
+
+                        <img
+                        src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1200&auto=format&fit=crop"
+                        alt="Tissot">
+
+                        <div class="brand-content">
+
+                            <h4>Tissot</h4>
+
+                            <p>
+                                Sự kết hợp hoàn hảo giữa thể thao và cổ điển.
+                            </p>
+
+                            <button class="btn btn-gold">
+                                Xem thêm
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Omega -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="brand-card">
+
+                        <img
+                        src="https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?q=80&w=1200&auto=format&fit=crop"
+                        alt="Omega">
+
+                        <div class="brand-content">
+
+                            <h4>Omega</h4>
+
+                            <p>
+                                Đồng hồ nổi tiếng từng đồng hành cùng NASA.
+                            </p>
+
+                            <button class="btn btn-gold">
+                                Xem thêm
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Orient -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="brand-card">
+
+                        <img
+                        src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200&auto=format&fit=crop"
+                        alt="Orient">
+
+                        <div class="brand-content">
+
+                            <h4>Orient</h4>
+
+                            <p>
+                                Đồng hồ Nhật Bản với phong cách cổ điển tinh tế.
+                            </p>
+
+                            <button class="btn btn-gold">
+                                Xem thêm
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Seiko -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="brand-card">
+
+                        <img
+                        src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1200&auto=format&fit=crop"
+                        alt="Seiko">
+
+                        <div class="brand-content">
+
+                            <h4>Seiko</h4>
+
+                            <p>
+                                Công nghệ tiên tiến và độ bền vượt thời gian.
+                            </p>
+
+                            <button class="btn btn-gold">
+                                Xem thêm
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Daniel Wellington -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="brand-card">
+
+                        <img
+                        src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?q=80&w=1200&auto=format&fit=crop"
+                        alt="Daniel Wellington">
+
+                        <div class="brand-content">
+
+                            <h4>Daniel Wellington</h4>
+
+                            <p>
+                                Thiết kế tối giản hiện đại mang phong cách Bắc Âu.
+                            </p>
+
+                            <button class="btn btn-gold">
+                                Xem thêm
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Michael Kors -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="brand-card">
+
+                        <img
+                        src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop"
+                        alt="Michael Kors">
+
+                        <div class="brand-content">
+
+                            <h4>Michael Kors</h4>
+
+                            <p>
+                                Đồng hồ thời trang cao cấp dành cho phong cách hiện đại.
+                            </p>
+
+                            <button class="btn btn-gold">
+                                Xem thêm
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <h3 class="mb-3">
+
+                WATCHES STORE
+
+            </h3>
+
+            <p>
+
+                Luxury Watch Collection 2026
+
+            </p>
+
+            <div class="social-icons mt-4">
+
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
