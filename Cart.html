@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Luxury Watch Cart</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* NAVBAR */
+        .navbar{
+            background-color: black;
+        }
+
+        .navbar-brand{
+            color: gold !important;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .nav-link{
+            color: white !important;
+        }
+
+        .nav-link:hover{
+            color: gold !important;
+        }
+
+        /* BANNER */
+        .cart-banner{
+            height: 300px;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)),
+
+            url('https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200');
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            text-align: center;
+        }
+
+        .cart-banner h1{
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        /* CARD */
+        .card{
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        /* IMAGE */
+        .cart-img{
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* BUTTON */
+        .btn-warning{
+            background-color: gold;
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-warning:hover{
+            background-color: #d4af37;
+        }
+
+        .qty-btn{
+            width: 40px;
+            height: 40px;
+        }
+
+        footer{
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                WATCHES
+            </a>
+
+            <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Shop
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active text-warning" href="#">
+                            Cart
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- BANNER -->
+    <section class="cart-banner">
+
+        <div>
+
+            <h1>
+                Shopping Cart
+            </h1>
+
+            <p class="lead">
+                Premium Luxury Watches
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CART -->
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- LEFT -->
+                <div class="col-lg-8">
+
+                    <div id="cart-items"></div>
+
+                </div>
+
+                <!-- RIGHT -->
+                <div class="col-lg-4">
+
+                    <div class="card shadow p-4">
+
+                        <h2 class="fw-bold mb-4">
+                            Order Summary
+                        </h2>
+
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <span>Subtotal</span>
+
+                            <span id="subtotal">
+                                $0
+                            </span>
+
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <span>Shipping</span>
+
+                            <span>
+                                $20
+                            </span>
+
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-3">
+
+                            <span>Tax</span>
+
+                            <span>
+                                $10
+                            </span>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="d-flex justify-content-between">
+
+                            <h4>Total</h4>
+
+                            <h4 class="text-warning" id="total">
+                                $0
+                            </h4>
+
+                        </div>
+
+                        <!-- CHECKOUT -->
+                        <button class="btn btn-warning w-100 py-3 mt-4"
+                        onclick="checkout()">
+
+                            Proceed To Checkout
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-4">
+
+        <p class="mb-0">
+            © 2026 Luxury Watch Store
+        </p>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        // =========================
+        // PRODUCT DATA
+        // =========================
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [
+
+            {
+                id: 1,
+                name: "Rolex Submariner",
+                desc: "Luxury Men's Watch",
+                price: 850,
+                quantity: 1,
+
+                image:
+                "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1000"
+            },
+
+            {
+                id: 2,
+                name: "Omega Speedmaster",
+                desc: "Elegant Collection",
+                price: 650,
+                quantity: 1,
+
+                image:
+                "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1000"
+            }
+
+        ];
+
+        // =========================
+        // SAVE LOCAL STORAGE
+        // =========================
+
+        function saveCart(){
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+        }
+
+        // =========================
+        // DISPLAY CART
+        // =========================
+
+        function displayCart(){
+
+            let cartItems =
+            document.getElementById("cart-items");
+
+            cartItems.innerHTML = "";
+
+            let subtotal = 0;
+
+            cart.forEach((item, index)=>{
+
+                subtotal +=
+                item.price * item.quantity;
+
+                cartItems.innerHTML += `
+
+                <div class="card shadow-sm mb-4">
+
+                    <div class="row g-0 align-items-center">
+
+                        <div class="col-md-4">
+
+                            <img src="${item.image}"
+                            class="img-fluid cart-img w-100">
+
+                        </div>
+
+                        <div class="col-md-8">
+
+                            <div class="card-body p-4">
+
+                                <div class="d-flex justify-content-between">
+
+                                    <div>
+
+                                        <h3 class="fw-bold">
+                                            ${item.name}
+                                        </h3>
+
+                                        <p class="text-muted">
+                                            ${item.desc}
+                                        </p>
+
+                                    </div>
+
+                                    <h4 class="text-warning fw-bold">
+
+                                        $${item.price}
+
+                                    </h4>
+
+                                </div>
+
+                                <!-- QUANTITY -->
+                                <div class="d-flex align-items-center gap-3 mt-4">
+
+                                    <button
+                                    class="btn btn-outline-dark qty-btn"
+
+                                    onclick="decreaseQty(${index})">
+
+                                        -
+
+                                    </button>
+
+                                    <span class="fs-5 fw-bold">
+
+                                        ${item.quantity}
+
+                                    </span>
+
+                                    <button
+                                    class="btn btn-outline-dark qty-btn"
+
+                                    onclick="increaseQty(${index})">
+
+                                        +
+
+                                    </button>
+
+                                </div>
+
+                                <!-- REMOVE -->
+                                <button
+                                class="btn btn-danger mt-4"
+
+                                onclick="removeItem(${index})">
+
+                                    <i class="bi bi-trash"></i>
+                                    Remove
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                `;
+
+            });
+
+            // TOTAL
+            document.getElementById("subtotal")
+            .innerText = "$" + subtotal;
+
+            document.getElementById("total")
+            .innerText = "$" + (subtotal + 20 + 10);
+
+            saveCart();
+
+        }
+
+        // =========================
+        // INCREASE
+        // =========================
+
+        function increaseQty(index){
+
+            cart[index].quantity++;
+
+            displayCart();
+
+        }
+
+        // =========================
+        // DECREASE
+        // =========================
+
+        function decreaseQty(index){
+
+            if(cart[index].quantity > 1){
+
+                cart[index].quantity--;
+
+            }
+
+            displayCart();
+
+        }
+
+        // =========================
+        // REMOVE ITEM
+        // =========================
+
+        function removeItem(index){
+
+            cart.splice(index,1);
+
+            displayCart();
+
+        }
+
+        // =========================
+        // CHECKOUT
+        // =========================
+
+        function checkout(){
+
+            if(cart.length === 0){
+
+                alert("Your cart is empty!");
+
+                return;
+
+            }
+
+            // Fake payment success
+            alert("Payment Successful!");
+
+            // Clear cart
+            cart = [];
+
+            saveCart();
+
+            displayCart();
+
+        }
+
+        // =========================
+        // START
+        // =========================
+
+        displayCart();
+
+    </script>
+
+</body>
+</html>
