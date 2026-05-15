@@ -48,58 +48,15 @@
         .feature-box:last-child { border-right: none; }
         .feature-icon { font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 15px; }
         
-        /* =========================================
-           FOOTER CUSTOM CSS - SÁNG RÕ, DỄ ĐỌC
-           ========================================= */
-        .footer { 
-            background-color: var(--dark-bg); 
-            padding: 60px 0 20px; 
-        }
-        /* Tiêu đề Footer trắng tinh */
-        .footer h5, .footer .brand-font { 
-            color: #ffffff !important; 
-            font-weight: 700; 
-            margin-bottom: 20px; 
-            letter-spacing: 1px; 
-        }
-        /* Chữ đoạn văn xám sáng, tương phản cao */
-        .footer p, .footer .footer-copyright { 
-            color: #e0e0e0 !important; 
-            font-size: 0.95rem;
-        }
-        /* Link trong footer */
-        .footer a { 
-            color: #e0e0e0 !important; 
-            text-decoration: none; 
-            transition: 0.3s; 
-        }
-        .footer a:hover { 
-            color: var(--primary-gold) !important; 
-            padding-left: 5px; 
-        }
-        /* Icon mạng xã hội */
-        .social-icons a { 
-            font-size: 1.2rem; 
-            margin-right: 10px; 
-            color: #ffffff !important; 
-            background: rgba(255,255,255,0.2); 
-            width: 40px; 
-            height: 40px; 
-            display: inline-flex; 
-            align-items: center; 
-            justify-content: center; 
-            border-radius: 50%; 
-            transition: 0.3s;
-        }
-        .social-icons a:hover { 
-            background: var(--primary-gold); 
-        }
-        /* Đường kẻ ngang dưới cùng */
-        .footer-divider {
-            border-top: 1px solid #444444;
-            padding-top: 20px;
-            margin-top: 40px;
-        }
+        /* Footer */
+        .footer { background-color: var(--dark-bg); padding: 60px 0 20px; }
+        .footer h5, .footer .brand-font { color: #ffffff !important; font-weight: 700; margin-bottom: 20px; letter-spacing: 1px; }
+        .footer p, .footer .footer-copyright { color: #e0e0e0 !important; font-size: 0.95rem; }
+        .footer a { color: #e0e0e0 !important; text-decoration: none; transition: 0.3s; }
+        .footer a:hover { color: var(--primary-gold) !important; padding-left: 5px; }
+        .social-icons a { font-size: 1.2rem; margin-right: 10px; color: #ffffff !important; background: rgba(255,255,255,0.2); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; transition: 0.3s; }
+        .social-icons a:hover { background: var(--primary-gold); }
+        .footer-divider { border-top: 1px solid #444444; padding-top: 20px; margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -134,9 +91,10 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Nam</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Nữ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Thương hiệu</a></li>
+                    
+                    <li class="nav-item"><a class="nav-link" href="nam.html">Nam</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nu.html">Nữ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Thương hiệu</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Tin tức</a></li>
                 </ul>
             </div>
@@ -156,7 +114,7 @@
         <div class="container">
             <h1 class="display-3 fw-bold mb-4">Thời Gian Là Sự Kiêu Hãnh</h1>
             <p class="lead mb-5 mx-auto" style="max-width: 600px;">Khám phá bộ sưu tập đồng hồ cơ học và quartz tinh xảo, định hình phong cách cá nhân của bạn với những tuyệt tác từ Thụy Sĩ.</p>
-            <a href="products.html" class="btn btn-gold btn-lg rounded-0 px-5">Khám Phá Ngay</a>
+            <a href="nam.html" class="btn btn-gold btn-lg rounded-0 px-5">Khám Phá Ngay</a>
         </div>
     </section>
 
@@ -254,7 +212,7 @@
             </div>
         </div>
         <div class="text-center mt-4">
-            <a href="products.html" class="btn btn-outline-dark rounded-0 px-4 py-2">Xem Tất Cả Sản Phẩm <i class="fa-solid fa-arrow-right ms-2"></i></a>
+            <a href="nam.html" class="btn btn-outline-dark rounded-0 px-4 py-2">Xem Tất Cả Sản Phẩm <i class="fa-solid fa-arrow-right ms-2"></i></a>
         </div>
     </section>
 
@@ -274,8 +232,8 @@
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h5>Danh Mục</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a href="#">Đồng hồ Nam</a></li>
-                        <li class="mb-3"><a href="#">Đồng hồ Nữ</a></li>
+                        <li class="mb-3"><a href="nam.html">Đồng hồ Nam</a></li>
+                        <li class="mb-3"><a href="nu.html">Đồng hồ Nữ</a></li>
                         <li class="mb-3"><a href="#">Đồng hồ Đôi</a></li>
                         <li class="mb-3"><a href="#">Phụ kiện dây da</a></li>
                     </ul>
