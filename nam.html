@@ -64,14 +64,15 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="nam.html">Nam</a></li> <li class="nav-item"><a class="nav-link" href="nu.html">Nữ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="nam.html">Nam</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nu.html">Nữ</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Thương hiệu</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Tin tức</a></li>
                 </ul>
             </div>
             <div class="d-none d-lg-flex align-items-center">
                 <a href="#" class="nav-link fs-5 me-3"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href="cart.html" class="nav-link fs-5 position-relative"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="Cart.html" class="nav-link fs-5 position-relative"><i class="fa-solid fa-bag-shopping"></i></a>
             </div>
         </div>
     </nav>
@@ -106,6 +107,8 @@
 
             <div class="col-lg-9">
                 <div class="row">
+
+                    <!-- SP 1: ROLEX -->
                     <div class="col-md-6 col-xl-4">
                         <div class="card product-card">
                             <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1524592094714-0f0654ece975?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Watch"></div>
@@ -113,9 +116,16 @@
                                 <p class="text-secondary small mb-1">ROLEX</p>
                                 <h6 class="card-title fw-bold">Oyster Perpetual 41</h6>
                                 <p class="price">125,000,000 ₫</p>
+                                <button class="btn btn-dark btn-sm w-100 mt-2"
+                                    onclick="addToCart(1, 'ROLEX', 'Oyster Perpetual 41', 125000000,
+                                    'https://images.unsplash.com/photo-1524592094714-0f0654ece975?auto=format&fit=crop&w=400&q=80')">
+                                    <i class="fa-solid fa-bag-shopping me-1"></i> Thêm vào giỏ
+                                </button>
                             </div>
                         </div>
                     </div>
+
+                    <!-- SP 2: OMEGA -->
                     <div class="col-md-6 col-xl-4">
                         <div class="card product-card">
                             <div class="badge-custom bg-danger">-10%</div>
@@ -124,9 +134,16 @@
                                 <p class="text-secondary small mb-1">OMEGA</p>
                                 <h6 class="card-title fw-bold">Seamaster Diver 300M</h6>
                                 <p class="price">127,500,000 ₫</p>
+                                <button class="btn btn-dark btn-sm w-100 mt-2"
+                                    onclick="addToCart(2, 'OMEGA', 'Seamaster Diver 300M', 127500000,
+                                    'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=400&q=80')">
+                                    <i class="fa-solid fa-bag-shopping me-1"></i> Thêm vào giỏ
+                                </button>
                             </div>
                         </div>
                     </div>
+
+                    <!-- SP 3: CASIO -->
                     <div class="col-md-6 col-xl-4">
                         <div class="card product-card">
                             <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Watch"></div>
@@ -134,9 +151,16 @@
                                 <p class="text-secondary small mb-1">CASIO</p>
                                 <h6 class="card-title fw-bold">G-Shock Mudmaster</h6>
                                 <p class="price">8,900,000 ₫</p>
+                                <button class="btn btn-dark btn-sm w-100 mt-2"
+                                    onclick="addToCart(3, 'CASIO', 'G-Shock Mudmaster', 8900000,
+                                    'https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&w=400&q=80')">
+                                    <i class="fa-solid fa-bag-shopping me-1"></i> Thêm vào giỏ
+                                </button>
                             </div>
                         </div>
                     </div>
+
+                    <!-- SP 4: TISSOT -->
                     <div class="col-md-6 col-xl-4">
                         <div class="card product-card">
                             <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1548171915-e763b00ef465?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Watch"></div>
@@ -144,9 +168,16 @@
                                 <p class="text-secondary small mb-1">TISSOT</p>
                                 <h6 class="card-title fw-bold">PRX Powermatic 80</h6>
                                 <p class="price">18,500,000 ₫</p>
+                                <button class="btn btn-dark btn-sm w-100 mt-2"
+                                    onclick="addToCart(4, 'TISSOT', 'PRX Powermatic 80', 18500000,
+                                    'https://images.unsplash.com/photo-1548171915-e763b00ef465?auto=format&fit=crop&w=400&q=80')">
+                                    <i class="fa-solid fa-bag-shopping me-1"></i> Thêm vào giỏ
+                                </button>
                             </div>
                         </div>
                     </div>
+
+                    <!-- SP 5: SEIKO -->
                     <div class="col-md-6 col-xl-4">
                         <div class="card product-card">
                             <div class="badge-custom">MỚI</div>
@@ -155,9 +186,16 @@
                                 <p class="text-secondary small mb-1">SEIKO</p>
                                 <h6 class="card-title fw-bold">Presage Cocktail Time</h6>
                                 <p class="price">12,500,000 ₫</p>
+                                <button class="btn btn-dark btn-sm w-100 mt-2"
+                                    onclick="addToCart(5, 'SEIKO', 'Presage Cocktail Time', 12500000,
+                                    'https://images.unsplash.com/photo-1587836374828-cb4387860987?auto=format&fit=crop&w=400&q=80')">
+                                    <i class="fa-solid fa-bag-shopping me-1"></i> Thêm vào giỏ
+                                </button>
                             </div>
                         </div>
                     </div>
+
+                    <!-- SP 6: ORIENT -->
                     <div class="col-md-6 col-xl-4">
                         <div class="card product-card">
                             <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1508656960144-8395562d9db6?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Watch"></div>
@@ -165,9 +203,15 @@
                                 <p class="text-secondary small mb-1">ORIENT</p>
                                 <h6 class="card-title fw-bold">Bambino Open Heart</h6>
                                 <p class="price">6,200,000 ₫</p>
+                                <button class="btn btn-dark btn-sm w-100 mt-2"
+                                    onclick="addToCart(6, 'ORIENT', 'Bambino Open Heart', 6200000,
+                                    'https://images.unsplash.com/photo-1508656960144-8395562d9db6?auto=format&fit=crop&w=400&q=80')">
+                                    <i class="fa-solid fa-bag-shopping me-1"></i> Thêm vào giỏ
+                                </button>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -180,5 +224,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

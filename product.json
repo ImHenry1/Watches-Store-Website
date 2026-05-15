@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "brand": "ROLEX",
+    "name": "Oyster Perpetual 41",
+    "price": 125000000,
+    "originalPrice": null,
+    "image": "https://images.unsplash.com/photo-1524592094714-0f0654ece975?auto=format&fit=crop&w=400&q=80",
+    "category": "nam",
+    "badge": null
+  },
+  {
+    "id": 2,
+    "brand": "OMEGA",
+    "name": "Seamaster Diver 300M",
+    "price": 127500000,
+    "originalPrice": 150000000,
+    "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=400&q=80",
+    "category": "nam",
+    "badge": "-10%"
+  },
+  {
+    "id": 3,
+    "brand": "CASIO",
+    "name": "G-Shock Mudmaster",
+    "price": 8900000,
+    "originalPrice": null,
+    "image": "https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&w=400&q=80",
+    "category": "nam",
+    "badge": null
+  },
+  {
+    "id": 4,
+    "brand": "TISSOT",
+    "name": "PRX Powermatic 80",
+    "price": 18500000,
+    "originalPrice": null,
+    "image": "https://images.unsplash.com/photo-1548171915-e763b00ef465?auto=format&fit=crop&w=400&q=80",
+    "category": "nam",
+    "badge": null
+  },
+  {
+    "id": 5,
+    "brand": "SEIKO",
+    "name": "Presage Cocktail Time",
+    "price": 12500000,
+    "originalPrice": null,
+    "image": "https://images.unsplash.com/photo-1587836374828-cb4387860987?auto=format&fit=crop&w=400&q=80",
+    "category": "nam",
+    "badge": "MỚI"
+  },
+  {
+    "id": 6,
+    "brand": "ORIENT",
+    "name": "Bambino Open Heart",
+    "price": 6200000,
+    "originalPrice": null,
+    "image": "https://images.unsplash.com/photo-1508656960144-8395562d9db6?auto=format&fit=crop&w=400&q=80",
+    "category": "nam",
+    "badge": null
+  },
+  {
+    "id": 7,
+    "brand": "LONGINES",
+    "name": "La Grande Classique",
+    "price": 42000000,
+    "originalPrice": null,
+    "image": "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=400&q=80",
+    "category": "nu",
+    "badge": "MỚI"
+  },
+  {
+    "id": 8,
+    "brand": "TISSOT",
+    "name": "T-Lady Lovely Round",
+    "price": 9800000,
+    "originalPrice": null,
+    "image": "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=400&q=80",
+    "category": "nu",
+    "badge": null
+  }
+]
